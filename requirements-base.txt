@@ -1,0 +1,20 @@
+# mirana-web-v2 requirements.txt file for command libraries
+#
+# -> Only keep common build dependancies for all environments.
+# -> This file meant to be readable. Keep it clean and organized.
+# -> Only add primary library. Let pip handle adding & installing dependencies.
+# -> If required, add version limiter to latest statble release format.
+
+# django dependancies
+django>=5.2,<6.0                        # Django itself
+djangorestframework>=3.16.0,<3.17       # Rest API support
+djangorestframework-simplejwt>=5.0,<6.0 # DRF JWT support
+dj-rest-auth>=7.0.0,<8.0.0              # DRF auth support
+
+django-cors-headers>=4.7.0,<4.8         # enables cors functionality for APIs
+django-environ==0.12.0                  # reads system environment
+django-extensions                       # additional features to django
+django-split-settings==1.3.2            # keeps settings more readable & managable by splitting
+django-stubs>=5.2,<5.3                  # statit types and type inference for django
+
+

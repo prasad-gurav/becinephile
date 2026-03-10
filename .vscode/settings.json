@@ -1,0 +1,53 @@
+{
+	// ----- Editor (HackSoft-style) -----
+	"editor.fontFamily": "'Fira Code Medium', 'Fira Code', 'Droid Sans Mono', monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 14,
+	"editor.tabSize": 4,
+	"editor.insertSpaces": true,
+	"editor.detectIndentation": false,
+	"editor.rulers": [119],
+	"editor.formatOnSave": true,
+	"editor.trimAutoWhitespace": true,
+	"editor.bracketPairColorization.enabled": true,
+	"editor.guides.bracketPairs": true,
+	"editor.renderWhitespace": "boundary",
+	"editor.suggestSelection": "first",
+	"editor.wordWrap": "off",
+
+	// ----- Files -----
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.exclude": {
+		"**/__pycache__": true,
+		"**/*.pyc": true,
+		"**/.mypy_cache": true,
+		"**/.pytest_cache": true,
+		"**/.ruff_cache": true
+	},
+
+	// ----- Python (Black + isort, aligned with .isort.cfg) -----
+	"[python]": {
+		"editor.defaultFormatter": "ms-python.black-formatter",
+		"editor.tabSize": 4,
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.organizeImports": "explicit"
+		}
+	},
+	"python.analysis.typeCheckingMode": "basic",
+	"python.analysis.autoImportCompletions": true,
+	"black-formatter.args": ["--line-length", "119"],
+	"isort.args": ["--profile", "black", "--line-length", "119"],
+	"isort.check": true,
+
+	// ----- Django -----
+	"python.analysis.extraPaths": ["${workspaceFolder}"],
+	"files.associations": {
+		"**/settings*.py": "python",
+		"**/urls.py": "python",
+		"**/wsgi.py": "python",
+		"**/manage.py": "python"
+	}
+}

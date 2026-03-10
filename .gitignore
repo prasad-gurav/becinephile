@@ -1,0 +1,7 @@
+.venv
+.env
+.env.local
+.env.development
+.env.production
+
+becinephile/db.sqlite3
